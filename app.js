@@ -5,13 +5,12 @@ const connectDB = require("./db/connect");
 //Import Routes here!
 const tasks = require("./routes/task");
 require("dotenv").config();
+
 // middleware here
+app.use(express.static("./public"));
 app.use(express.json());
 
 //Using routes
-app.get("/", (req, res) => {
-  res.send("Task Manager App");
-});
 
 app.use("/api/v1/tasks", tasks);
 
