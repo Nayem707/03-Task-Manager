@@ -26,7 +26,7 @@ const start = async () => {
   try {
     await connectDB(process.env.MONGO_URL);
     app.listen(port, () => {
-      console.log("server is runing 3000");
+      console.log(`server is runing http://localhost:${3000}`);
     });
   } catch (error) {
     console.log(error);
