@@ -1,18 +1,18 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 // mongoose here!
-const connectDB = require("./db/connect");
+const connectDB = require('./db/connect');
 //Import Routes here!
-const tasks = require("./routes/task");
-require("dotenv").config();
+const tasks = require('./routes/task');
+require('dotenv').config();
 
 // middleware here
-app.use(express.static("./public"));
+app.use(express.static('./public'));
 app.use(express.json());
 
 //Using routes
 
-app.use("/api/v1/tasks", tasks);
+app.use('/api/v1/tasks', tasks);
 
 // app.get("/api/v1/tasks");            -get all task
 // app.post("/api/v1/tasks");           -create a new task
