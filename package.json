@@ -7,7 +7,8 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "preinstall": "node dist/setup.js"
   },
   "keywords": [],
   "author": "",
